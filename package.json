@@ -10,6 +10,10 @@
     "build": "tsc",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlirezaDevv/presian-weeks.git"
+  },
   "keywords": [
     "week",
     "date",
