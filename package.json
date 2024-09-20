@@ -4,13 +4,14 @@
   "description": "Select a starting date and get the current week's information, and you can also scroll forward and backward between weeks.",
   "main": "dist/index.js",
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "types": "dist/types/src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/AlirezaDevv/presian-weeks.git"
