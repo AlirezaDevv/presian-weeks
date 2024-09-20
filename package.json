@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "module": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
