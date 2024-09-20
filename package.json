@@ -1,0 +1,27 @@
+{
+  "name": "presian-weeks",
+  "version": "1.0.0",
+  "description": "Select a starting date and get the current week's information, and you can also scroll forward and backward between weeks.",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "week",
+    "date",
+    "persian",
+    "jalali"
+  ],
+  "author": "Alireza Mirzaee",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  }
+}
