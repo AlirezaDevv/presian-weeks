@@ -2,7 +2,7 @@
   "name": "persian-calendar-week-utility",
   "version": "1.0.6",
   "description": "Select a starting date and get the current week's information, and you can also scroll forward and backward between weeks.",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
     "dist"
   ],
