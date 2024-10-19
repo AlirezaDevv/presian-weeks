@@ -50,7 +50,7 @@ const threetWeesAgoData = getPersianWeek(3 , TransferDateEnum.Back ); // Gives d
 
 ```json
 {
-  "dateDetails": [
+  "weekDetails": [
     {
       "day": 28,
       "month": 7,
