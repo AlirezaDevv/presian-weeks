@@ -14,7 +14,7 @@ enum TransferDateEnum {
  * @returns An object containing details about the current or adjusted week, including the year, month name, and a list of objects representing each day of the week.
  */
 
-const getCurrentWeek = (
+const getPersianWeek = (
   weeks?: number,
   direction?: TransferDateEnum
 ): WeekType => {
@@ -48,7 +48,7 @@ const getDatesStartOfWeek = (currentDate: Date): WeekType => {
   const weekMonth = getPersianMonthOfWeek(startOfWeekDate);
 
   return {
-    dateDetails: dateList,
+    weekDetails: dateList,
     monthName: weekMonth,
     year: weekYear,
   };
@@ -81,7 +81,7 @@ const getDatesMiddleOfWeek = (
   const weekMonth = getPersianMonthOfWeek(startOfWeekDate);
 
   return {
-    dateDetails: dateList,
+    weekDetails: dateList,
     monthName: weekMonth,
     year: weekYear,
   };
@@ -137,10 +137,10 @@ const getWeekDaysDateList = (
   let dateNumber = 0;
   while (currentDate <= endDate) {
     dateNumber++;
-    const dateDetails = getDateDetails(currentDate);
+    const weekDetails = getWeekDetails(currentDate);
     const dateObj = {
-      day: dateDetails.day,
-      month: dateDetails.month,
+      day: weekDetails.day,
+      month: weekDetails.month,
       isToday: isToday(currentDate),
       dayName: getPersianDayOfWeek(dateNumber),
     };
@@ -174,7 +174,7 @@ const getPersianDayOfWeek = (dayNumber: number) => {
 
   return persianDays[dayNumber - 1] || "Invalid day number";
 };
-type GetDateDetailsType = {
+type GetWeekDetailsType = {
   month: number;
   day: number;
 };
@@ -200,7 +200,7 @@ const getPersianMonthOfWeek = (date: Date) => {
   return persianMonths[persianMonth - 1];
 };
 
-const getDateDetails = (date: Date): GetDateDetailsType => {
+const getWeekDetails = (date: Date): GetWeekDetailsType => {
   const persinaDateArray = getPersianDate(date);
 
   return {
@@ -222,4 +222,4 @@ const getPersianDate = (date: Date) => {
   return persinaDateArray;
 };
 
-export { getCurrentWeek, TransferDateEnum };
+export { getPersianWeek , TransferDateEnum };

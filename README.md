@@ -23,13 +23,25 @@ npm install persian-weeks
 ##### Usage
 
 ```ts
-import { getCurrentWeek } from "persian-weeks";
+import { getPersianWeek , TransferDateEnum } from "persian-weeks";
 
-const currentWeekData = getCurrentWeek();
+const currentWeekData = getPersianWeek();
 
-console.log(currentWeekData.dateDetails); // Array of day objects
+console.log(currentWeekData.weekDetails); // Array of day objects
 console.log(currentWeekData.monthName); // String representing the month name in Persian
 console.log(currentWeekData.year); // Integer representing the year
+
+
+--------------
+
+// Move between weeks
+
+const twoWeeksLaterData = getPersianWeek(2 , TransferDateEnum.Front ); // Gives data of the two weeks later
+
+const threetWeesAgoData = getPersianWeek(3 , TransferDateEnum.Back ); // Gives data of the three weeks ago
+
+
+
 ```
 
 <br>

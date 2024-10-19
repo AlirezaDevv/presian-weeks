@@ -6,7 +6,7 @@ export interface WeekDaysDateListType  {
   };
   
   export interface WeekType  {
-    dateDetails: WeekDaysDateListType[];
+    weekDetails: WeekDaysDateListType[];
     monthName: string;
     year: number;
   };
