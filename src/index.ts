@@ -5,20 +5,20 @@ enum TransferDateEnum {
   back = "back",
 }
 
-type originDateType = {
-  day: number;
-  mounth: number;
-  year: number;
-};
+/**
+ * Calculates the current week in the Jalali calendar, optionally adjusting by a number of weeks
+ * and a direction. The Jalali calendar week starts on Saturday and ends on Friday.
+ *
+ * @param weeks (optional) The number of weeks to adjust the current week by (positive for future weeks, negative for past weeks). Defaults to 0 (current week).
+ * @param direction (optional) The direction to adjust the week by. Defaults to `TransferDateEnum.front` (forward).
+ * @returns An object containing details about the current or adjusted week, including the year, month name, and a list of objects representing each day of the week.
+ */
 
 const getCurrentWeek = (
-  originDate: originDateType,
   weeks?: number,
   direction?: TransferDateEnum
 ): WeekType => {
-  const clientOriginDate = `${originDate.mounth}/${originDate.day}/${originDate.year}`;
-
-  const startDate = new Date(clientOriginDate);
+  const startDate = new Date("3/21/2015");
   const currentDate = transferDate({
     days: (weeks ?? 0) * 7,
     direction,
