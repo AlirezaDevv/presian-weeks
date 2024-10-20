@@ -1,5 +1,7 @@
 ### Persian Weeks Library
 
+![logo](./l3.webp)
+
 This package, written in TypeScript, provides convenient functions for retrieving week data in the Persian Jalali calendar.
 
 ##### Key Features:
